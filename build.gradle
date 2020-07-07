@@ -14,10 +14,10 @@ configurations {
     }
 }
 
-jar{
+jar {
     baseName 'testJar'
     manifest {
-        attributes 'Main-Class':"com.example.demogradle.DemoGradleApplication"
+        attributes 'Main-Class': "com.example.demogradle.DemoGradleApplication"
     }
 }
 

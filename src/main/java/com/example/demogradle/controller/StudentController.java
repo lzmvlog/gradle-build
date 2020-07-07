@@ -50,12 +50,11 @@ public class StudentController {
      *
      * @param studentDTO student'dto
      * @param page       page
-     * @param pageSize   one page show size
      * @return list student'list
      */
     @PostMapping("selectPage")
-    public Result listStudentPage(StudentDTO studentDTO, Integer page, Integer pageSize) {
-        return new Result(ResultEnum.SUCCESS, studentService.listStudentsPage(new Page<>(page, pageSize), studentDTO));
+    public Result listStudentPage(StudentDTO studentDTO, com.example.demogradle.util.Page page) {
+        return new Result(ResultEnum.SUCCESS, studentService.listStudentsPage(new Page<>(page.getPage(), page.getPageNum()), studentDTO));
     }
 
 }
